@@ -15,12 +15,17 @@ class _lastReproducedState extends State<lastReproduced> {
           colour: Theme.of(context).colorScheme.primary,
           carChild: Lastreproducedchild(
             image: Image.network(
-                'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84480cb6155415663226fb37bd'),
+              'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84480cb6155415663226fb37bd',
+            ),
             text: Text('los ejemplos'),
           )),
       CardUsable(
           colour: Theme.of(context).colorScheme.primary,
-          carChild: Text('HomeWork')),
+          carChild: Lastreproducedchild(
+            image: Image.network(
+                'https://i.scdn.co/image/ab67616d00001e028ac778cc7d88779f74d33311'),
+            text: Text('Homework'),
+          )),
       CardUsable(
           colour: Theme.of(context).colorScheme.primary,
           carChild: Text('Reposaito')),
@@ -45,6 +50,7 @@ class _lastReproducedState extends State<lastReproduced> {
         carChild: Text('LOS PIBES CHORROS'),
       )
     ];
+    // i set expanded for avoid conflicts with column de home
     return Expanded(
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
